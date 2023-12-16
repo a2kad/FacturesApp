@@ -3,6 +3,9 @@
 # dependencies
 node_modules/
 
+# My Files
+ruslan/
+
 # Expo
 .expo/
 dist/
