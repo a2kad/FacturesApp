@@ -20,17 +20,24 @@ export default function LoginScreen() {
     }
     return (
         <View style={styles.container}>
-            <Text>LoginScreen</Text>
-            <Text>E-mail</Text>
-            <TextInput style={styles.formField} value={email} onChangeText={value => setEmail(value)} />
-            <Text>Password</Text>
-            <TextInput style={styles.formField} value={password} onChangeText={value => setPassword(value)} />
-            <Pressable style={styles.button} onPress={handleSubmit}>
-                <Text style={styles.buttonText}>Se connecter</Text>
-            </Pressable>
-            <Pressable onPress={() => navigation.navigate('SignUp')}>
-                <Text>Sign Up</Text>
-            </Pressable>
+            <View style={styles.inputView}>
+                <Text>E-mail :</Text>
+                <TextInput style={styles.formField} value={email} onChangeText={value => setEmail(value)} />
+            </View>
+            <View style={styles.inputView}>
+                <Text>Mot de passe :</Text>
+                <TextInput style={styles.formField} value={password} onChangeText={value => setPassword(value)} />
+            </View>
+            <View style={styles.inputViewCenter}>
+                <Pressable style={styles.button} onPress={handleSubmit}>
+                    <Text style={styles.buttonText}>Se connecter</Text>
+                </Pressable>
+            </View>
+            <View style={styles.inputViewCenter}>
+                <Pressable onPress={() => navigation.navigate('SignUp')}>
+                    <Text style={styles.linkText}>Sign Up</Text>
+                </Pressable>
+            </View>
         </View>
     )
 }
@@ -44,13 +51,30 @@ const styles = StyleSheet.create({
     },
     formField: {
         backgroundColor: '#CCC',
-        fontSize:12
+        fontSize: 12,
+        paddingVertical:5,
+        paddingHorizontal:10,
+        borderRadius:8
     },
     button: {
-        padding:10,
-        backgroundColor:'grey',
+        padding: 10,
+        backgroundColor: '#075985',
+        borderRadius:8,
+        padding:10
     },
-    buttonText:{
-        color:'white'
+    buttonText: {
+        color: 'white',
+        fontWeight:'bold'
+    },
+    inputView: {
+        marginVertical: 10,
+        width:'90%'
+    },
+    inputViewCenter: {
+        marginVertical: 10,
+    },
+    linkText:{
+        color:'#0000EE',
+        fontWeight:'bold'
     }
 })
