@@ -1,13 +1,10 @@
 import { StyleSheet, Text, View } from 'react-native'
 import React from 'react'
 
-
-export default function HomeScreen() {
-    
+export default function DevisScreen() {
     return (
         <View style={styles.container}>
-            <Text>HomeScreen</Text>
-            
+            <Text>DevisScreen</Text>
         </View>
     )
 }

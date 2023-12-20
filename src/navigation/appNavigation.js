@@ -1,21 +1,20 @@
-import { StyleSheet } from 'react-native'
 import React from 'react'
 import { NavigationContainer } from '@react-navigation/native';
-import { createNativeStackNavigator } from '@react-navigation/native-stack';
+import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 
 import HomeScreen from '../screens/HomeScreen'
+import DevisScreen from '../screens/DevisScreen';
 
 
-const Stack = createNativeStackNavigator();
+const Tab = createBottomTabNavigator();
 
 export default function AppNavigation() {
     return (
         <NavigationContainer>
-            <Stack.Navigator>
-                <Stack.Screen name='Home' component={HomeScreen} />
-            </Stack.Navigator>
+            <Tab.Navigator>
+                <Tab.Screen name='Facture' component={HomeScreen} />
+                <Tab.Screen name='Devis' component={DevisScreen} />
+            </Tab.Navigator>
         </NavigationContainer>
     )
 }
-
-const styles = StyleSheet.create({})
