@@ -1,14 +1,15 @@
-import { StyleSheet, Text, View } from 'react-native'
+import { StyleSheet, Text, ScrollView } from 'react-native'
 import React from 'react'
+import { ScrollView } from 'react-native-web';
 
 
 export default function HomeScreen() {
     
     return (
-        <View style={styles.container}>
-            <Text>HomeScreen</Text>
+        <ScrollView style={styles.container}>
+            <Text>Factures</Text>
             
-        </View>
+        </ScrollView>
     )
 }
 
