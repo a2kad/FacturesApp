@@ -13,7 +13,7 @@ export default function AppNavigation() {
     return (
         <NavigationContainer>
             <Tab.Navigator>
-                <Tab.Screen name='Facture' component={HomeScreen} options={{tabBarLabel: 'Factures', tabBarLabelStyle:{color:"grey"}, tabBarShowLabel: true, tabBarIcon: () =>(<DocumentIcon color={"grey"} size={24} />) }} />
+                <Tab.Screen name='Facture' component={HomeScreen} options={{tabBarLabel: 'Facture', tabBarLabelStyle:{color:"grey"}, tabBarShowLabel: true, tabBarIcon: () =>(<DocumentIcon color={"grey"} size={24} />) }} />
                 <Tab.Screen name='Devis' component={DevisScreen} options={{tabBarLabel: 'Devis', tabBarLabelStyle:{color:"grey"}, tabBarShowLabel: true, tabBarIcon: () =>(<DocumentChartBarIcon color={"grey"} size={24} />) }} />
             </Tab.Navigator>
         </NavigationContainer>
